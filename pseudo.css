@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.intro {
+  font-size: 1.2rem;
+}
+
+section {
+  background: white;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+button,
+input {
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* ======================================
+   PSEUDO CLASSES
+====================================== */
+
+/* :hover */
+.hover-button:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/* :focus */
+.focus-input:focus {
+  outline: 5px solid chartreuse;
+}
+
+/* :active */
+.active-button:active {
+  transform: scale(0.9);
+}
+
+/* :first-child / :last-child */
+.child-example li:first-child {
+  color: green;
+}
+
+.child-example li:last-child {
+  color: red;
+}
+
+/* :nth-child */
+.numbers {
+  display: flex;
+  gap: 10px;
+}
+
+.numbers div {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.numbers div:nth-child(odd) {
+  background-color: steelblue;
+  color: white;
+}
+
+section:nth-child(even) {
+  background-color: rgb(199, 230, 255);
+}
+
+.numbers div:nth-child(3n + 1) {
+  background-color: red;
+  color: white;
+}
+
+/* :checked */
+input:checked {
+  accent-color: green;
+}
+
+/* :not */
+.not-example p:not(.ignore) {
+  background-color: lightgreen;
+}
+
+/* ======================================
+   PSEUDO ELEMENTS
+====================================== */
+
+/* ::before */
+.before-example::before {
+  content: "⚠ ";
+}
+
+/* ::after */
+.after-example::after {
+  content: " ✓";
+  color: green;
+}
+
+/* ::first-letter */
+.first-letter-example::first-letter {
+  font-size: 3rem;
+  color: tomato;
+  font-weight: bold;
+}
+
+/* ::first-line */
+.first-line-example::first-line {
+  color: steelblue;
+  font-weight: bold;
+}
+
+/* ::selection */
+.selection-example::selection {
+  background-color: black;
+  color: white;
+}

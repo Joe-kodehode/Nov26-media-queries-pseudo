@@ -1,0 +1,170 @@
+/* ==========================
+   GENERAL
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+  background: whitesmoke;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto 40px;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* ==========================
+   BOXES
+========================== */
+
+.demo {
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+}
+
+.demo p {
+  line-height: 1.5;
+}
+
+.screen {
+  background: seagreen;
+}
+
+.orientation {
+  background: royalblue;
+}
+
+.dark {
+  background: orange;
+}
+
+.motion {
+  background: crimson;
+}
+
+.print {
+  background: slategray;
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  margin: 30px auto;
+  animation: move 1s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-50px);
+  }
+
+  to {
+    transform: translateX(50px);
+  }
+}
+
+/* ==========================
+   MAX-WIDTH (MIN-WIDTH IF MOBILE FIRST)
+========================== */
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .screen {
+    background-color: goldenrod;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .screen {
+    background-color: tomato;
+  }
+}
+
+/* ==========================
+   ORIENTATION
+========================== */
+
+@media (orientation: portrait) {
+  .orientation {
+    background-color: mediumaquamarine;
+  }
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+
+    color: white;
+  }
+}
+
+/* ==========================
+   REDUCED MOTION
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    animation: none;
+  }
+}
+
+/* ==========================
+   PRINT
+========================== */
+
+@media print {
+  body {
+    background-color: white;
+
+    color: black;
+  }
+
+  .print {
+    background-color: black;
+  }
+}
